@@ -74,8 +74,8 @@ export const projects: Project[] = [
     name: 'Campus Coupon',
     short: 'Student rewards app',
     problem:
-      'Students welkom campus was strugling with poor attendance which sometimes led to over catering and money loss. Campus Coupon gives them points for attending, which they redeem for cafeteria meals, while staff manage events, attendance and redemptions in a web portal. Team project (ITC327W, Prominent Programmers).',
-    role: 'Team project',
+      ' Central university of technology (Welkom campus) was strugling with poor attendance which sometimes led to over catering and money loss. Campus Coupon gives them points for attending, which they redeem for cafeteria meals, while staff manage events, attendance and redemptions in a web portal. Team project (ITC327W, Prominent Programmers).',
+    role: 'WIL Group project',
     year: '2026',
     tech: ['Flutter', 'ASP.NET Core MVC', 'Supabase', 'PostgreSQL'],
     links: {
