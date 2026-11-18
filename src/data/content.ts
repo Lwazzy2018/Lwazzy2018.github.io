@@ -69,12 +69,18 @@ export const projects: Project[] = [
       live: 'https://owen-tours-demo-web.onrender.com',
     },
   },
-  {
-    id: 'project-2',
-    name: 'Project Two',
-    short: 'Coming soon',
-    problem: 'Details coming soon.',
-    comingSoon: true,
+    {
+    id: 'campus-coupon',
+    name: 'Campus Coupon',
+    short: 'Student rewards app',
+    problem:
+      'Students welkom campus was strugling with poor attendance which sometimes led to over catering and money loss. Campus Coupon gives them points for attending, which they redeem for cafeteria meals, while staff manage events, attendance and redemptions in a web portal. Team project (ITC327W, Prominent Programmers).',
+    role: 'Team project',
+    year: '2026',
+    tech: ['Flutter', 'ASP.NET Core MVC', 'Supabase', 'PostgreSQL'],
+    links: {
+      github: 'https://github.com/Lwazzy2018/campus-coupon',
+    },
   },
   {
     id: 'project-3',
