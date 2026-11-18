@@ -10,7 +10,7 @@ export const profile = {
   heading: 'Building digital experiences through code.',
   intro:
     'Junior Software Developer passionate about building mobile and web applications using Flutter and C#.',
-  location: 'Nelspruit, South Africa',
+  location: 'South Africa',
   availability: 'Available January 2027',
   workPreference: 'On-site, hybrid or remote',
   photo: asset('img/profile-hero.jpg'),
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     problem:
       'A Mpumalanga tour company took bookings through Instagram and WhatsApp, with no seat tracking and deposits checked by hand. I built a booking platform where customers book trips and pay deposits online, and the admin manages trips, bookings and a gallery of previous trips.',
     role: 'Full-Stack Developer',
-    year: '2026',
+    year: '2026',    image: asset('img/owen-tours.png'),
     tech: ['Flutter', 'ASP.NET Core', 'Supabase', 'PostgreSQL', 'PayFast', 'Docker'],
     links: {
       github: 'https://github.com/Lwazzy2018/owen-tours',
@@ -108,11 +108,7 @@ export const education = [
     qualification: 'Diploma in Information Technology',
     period: '2024 – December 2026',
   },
-  {
-    school: 'Lungisani Secondary School',
-    qualification: "National Senior Certificate — Bachelor's Pass",
-    period: '2021',
-  },
+ 
 ]
 
 export const skills = [
