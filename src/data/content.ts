@@ -61,7 +61,8 @@ export const projects: Project[] = [
     problem:
       'A Mpumalanga tour company took bookings through Instagram and WhatsApp, with no seat tracking and deposits checked by hand. I built a booking platform where customers book trips and pay deposits online, and the admin manages trips, bookings and a gallery of previous trips.',
     role: 'Full-Stack Developer',
-    year: '2026',    image: asset('img/owen-tours.png'),
+        year: '2026',
+    image: asset('img/owen-tours.png.png'),
     tech: ['Flutter', 'ASP.NET Core', 'Supabase', 'PostgreSQL', 'PayFast', 'Docker'],
     links: {
       github: 'https://github.com/Lwazzy2018/owen-tours',
