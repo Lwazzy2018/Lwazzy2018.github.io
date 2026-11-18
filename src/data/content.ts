@@ -54,12 +54,19 @@ export type Project = {
 // bar's Projects menu. To add a real project, fill in its fields and delete
 // the line `comingSoon: true`. See README.md for an example.
 export const projects: Project[] = [
-  {
-    id: 'project-1',
-    name: 'Project One',
-    short: 'Coming soon',
-    problem: 'Details coming soon.',
-    comingSoon: true,
+    {
+    id: 'owen-tours',
+    name: 'Owen Tours and Travel',
+    short: 'Tour booking platform',
+    problem:
+      'A Mpumalanga tour company took bookings through Instagram and WhatsApp, with no seat tracking and deposits checked by hand. I built a booking platform where customers book trips and pay deposits online, and the admin manages trips, bookings and a gallery of previous trips.',
+    role: 'Full-Stack Developer',
+    year: '2026',
+    tech: ['Flutter', 'ASP.NET Core', 'Supabase', 'PostgreSQL', 'PayFast', 'Docker'],
+    links: {
+      github: 'https://github.com/Lwazzy2018/owen-tours',
+      live: 'https://owen-tours-demo-web.onrender.com',
+    },
   },
   {
     id: 'project-2',
