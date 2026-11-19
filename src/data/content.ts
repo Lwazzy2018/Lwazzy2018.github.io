@@ -84,7 +84,7 @@ export const projects: Project[] = [
       live: 'https://campus-coupon.onrender.com',
     },
   },
-  },
+  
   {
     id: 'project-3',
     name: 'Project Three',
