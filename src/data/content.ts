@@ -69,18 +69,21 @@ export const projects: Project[] = [
       live: 'https://owen-tours-demo-web.onrender.com',
     },
   },
-    {
+      {
     id: 'campus-coupon',
     name: 'Campus Coupon',
     short: 'Student rewards app',
     problem:
-      ' Central university of technology (Welkom campus) was strugling with poor attendance which sometimes led to over catering and money loss. Campus Coupon gives them points for attending, which they redeem for cafeteria meals, while staff manage events, attendance and redemptions in a web portal. Team project (ITC327W, Prominent Programmers).',
+      'Central University of Technology (Welkom campus) struggled with poor event attendance, which sometimes led to over-catering and wasted money. Campus Coupon gives students points for attending, which they redeem for cafeteria meals, while staff manage events, attendance and redemptions in a web portal. Team project (ITC327W, Prominent Programmers).',
     role: 'WIL Group project',
     year: '2026',
+    image: asset('img/campus-coupon.png'),
     tech: ['Flutter', 'ASP.NET Core MVC', 'Supabase', 'PostgreSQL'],
     links: {
       github: 'https://github.com/Lwazzy2018/campus-coupon',
+      live: 'https://campus-coupon.onrender.com',
     },
+  },
   },
   {
     id: 'project-3',
