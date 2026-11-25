@@ -100,13 +100,7 @@ export const projects: Project[] = [
       live: 'https://cyclia-ottp.onrender.com',
     },
   },
-  {
-    id: 'project-4',
-    name: 'Project Four',
-    short: 'Coming soon',
-    problem: 'Details coming soon.',
-    comingSoon: true,
-  },
+
 ]
 
 export const experience = [
