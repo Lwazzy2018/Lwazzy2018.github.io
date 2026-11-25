@@ -86,11 +86,19 @@ export const projects: Project[] = [
   },
   
   {
-    id: 'project-3',
-    name: 'Project Three',
-    short: 'Coming soon',
-    problem: 'Details coming soon.',
-    comingSoon: true,
+    id: 'cyclia',
+    name: 'Cyclia',
+    short: 'AI menstrual health app',
+    problem:
+      'Period-tracking apps rarely explain what people are feeling, and partners are often left guessing. Cyclia predicts cycles (personal after three cycles), has an AI health assistant that answers in 6 South African languages and refers emergencies to SA help numbers, and lets users choose exactly what a linked partner can see. Built with POPIA consent and Johannesburg data storage.',
+    role: 'Full-Stack Developer',
+    year: '2026',
+    // image: asset('img/cyclia.png'), // add a screenshot to public/img/cyclia.png, then remove the // at the start of this line
+    tech: ['Flutter', 'ASP.NET Core 8', 'Firebase', 'Cloud Firestore', 'Gemini API', 'Docker'],
+    links: {
+      github: 'https://github.com/Lwazzy2018/cyclia',
+      live: 'https://cyclia-ottp.onrender.com',
+    },
   },
   {
     id: 'project-4',
@@ -122,15 +130,30 @@ export const education = [
 ]
 
 export const skills = [
+  // Mobile & web
   'Flutter',
   'Dart',
+  'React',
+  'TypeScript',
+  'Tailwind CSS',
+  // Back end
   'C#',
   'ASP.NET Core',
+  'REST APIs',
   'Entity Framework Core',
+  'Authentication (JWT)',
+  // Data & cloud
+  'Firebase (Auth & Firestore)',
   'Supabase',
   'PostgreSQL',
   'SQL Server',
-  'Git',
+  'Docker',
+  'Render (cloud hosting)',
+  // AI
+  'AI integration (Gemini / OpenAI APIs)',
+  // Ways of working
+  'Git & GitHub',
+  'Automated testing',
   'Hardware Repair',
 ]
 
