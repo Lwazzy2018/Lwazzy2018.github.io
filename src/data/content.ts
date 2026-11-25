@@ -93,7 +93,7 @@ export const projects: Project[] = [
       'Period-tracking apps rarely explain what people are feeling, and partners are often left guessing. Cyclia predicts cycles (personal after three cycles), has an AI health assistant that answers in 6 South African languages and refers emergencies to SA help numbers, and lets users choose exactly what a linked partner can see. Built with POPIA consent and Johannesburg data storage.',
     role: 'Full-Stack Developer',
     year: '2026',
-    // image: asset('img/cyclia.png'), // add a screenshot to public/img/cyclia.png, then remove the // at the start of this line
+    image: asset('img/cyclia.png'),
     tech: ['Flutter', 'ASP.NET Core 8', 'Firebase', 'Cloud Firestore', 'Gemini API', 'Docker'],
     links: {
       github: 'https://github.com/Lwazzy2018/cyclia',
