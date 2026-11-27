@@ -124,9 +124,14 @@ function ProjectCard({ p, index, onOpen }: { p: Project; index: number; onOpen: 
             )}
             {p.links?.live && (
               <a href={p.links.live} target="_blank" rel="noreferrer" className="btn-ghost !px-4 !py-2.5 text-sm">
-                <ExternalLink className="size-4" /> Live demo
+                <ExternalLink className="size-4" /> {p.links.liveLabel ?? 'Live demo'}
               </a>
             )}
+            {p.links?.more?.map((l) => (
+              <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="btn-ghost !px-4 !py-2.5 text-sm">
+                <ExternalLink className="size-4" /> {l.label}
+              </a>
+            ))}
           </div>
         )}
       </div>
