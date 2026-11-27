@@ -46,7 +46,7 @@ export type Project = {
   year?: string // e.g. '2026'
   tech?: string[] // e.g. ['Flutter', 'Supabase']
   image?: string // e.g. asset('img/my-project.jpg'), put the file in public/img
-  links?: { github?: string; live?: string }
+  links?: { github?: string; live?: string; liveLabel?: string; more?: { label: string; url: string }[] }
   // Demo logins shown publicly on the card. Only use throwaway demo accounts here,
   // never a real or admin password you use anywhere else.
   demo?: { role: string; username: string; password: string }[]
@@ -85,11 +85,13 @@ export const projects: Project[] = [
     tech: ['Flutter', 'ASP.NET Core MVC', 'Supabase', 'PostgreSQL'],
     links: {
       github: 'https://github.com/Lwazzy2018/campus-coupon',
-      live: 'https://campus-coupon-admin.onrender.com',
+      live: 'https://campus-coupon.onrender.com',
+      liveLabel: 'Student app',
+      more: [{ label: 'Admin portal', url: 'https://campus-coupon-admin.onrender.com' }],
     },
     demo: [
-      { role: 'Admin', username: 'Lwazi@cut.ac.za', password: 'Lwazzy@2002!' },
-      { role: 'Cafeteria', username: 'caf@cut.ac.za', password: 'Lwazzy@2002!' },
+      { role: 'Admin portal: admin', username: 'Lwazi@cut.ac.za', password: 'Lwazzy@2002!' },
+      { role: 'Admin portal: cafeteria', username: 'caf@cut.ac.za', password: 'Lwazzy@2002!' },
     ],
     demoNote:
       'Please look around but do not add, edit or delete anything on the admin side. This is a shared demo, and changes affect everyone who visits after you.',
