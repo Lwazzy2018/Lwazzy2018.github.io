@@ -47,6 +47,10 @@ export type Project = {
   tech?: string[] // e.g. ['Flutter', 'Supabase']
   image?: string // e.g. asset('img/my-project.jpg'), put the file in public/img
   links?: { github?: string; live?: string }
+  // Demo logins shown publicly on the card. Only use throwaway demo accounts here,
+  // never a real or admin password you use anywhere else.
+  demo?: { role: string; username: string; password: string }[]
+  demoNote?: string // a short warning shown under the demo logins
   comingSoon?: boolean // true shows a "Coming soon" placeholder card
 }
 
@@ -81,8 +85,14 @@ export const projects: Project[] = [
     tech: ['Flutter', 'ASP.NET Core MVC', 'Supabase', 'PostgreSQL'],
     links: {
       github: 'https://github.com/Lwazzy2018/campus-coupon',
-      live: 'https://campus-coupon.onrender.com',
+      live: 'https://campus-coupon-admin.onrender.com',
     },
+    demo: [
+      { role: 'Admin', username: 'Lwazi@cut.ac.za', password: 'Lwazzy@2002!' },
+      { role: 'Cafeteria', username: 'caf@cut.ac.za', password: 'Lwazzy@2002!' },
+    ],
+    demoNote:
+      'Please look around but do not add, edit or delete anything on the admin side. This is a shared demo, and changes affect everyone who visits after you.',
   },
   
   {
