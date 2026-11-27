@@ -1,9 +1,31 @@
-import { ExternalLink, Github, Hourglass, ImageIcon } from 'lucide-react'
+import { useState } from 'react'
+import { Check, Copy, ExternalLink, Github, Hourglass, ImageIcon, KeyRound, TriangleAlert } from 'lucide-react'
 import { projects, type Project } from '../data/content'
 import SectionHeader from './SectionHeader'
 import type { LightboxItem } from './Lightbox'
 
 type Props = { onOpen: (item: LightboxItem) => void }
+
+function CopyField({ value, label }: { value: string; label: string }) {
+  const [copied, setCopied] = useState(false)
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        navigator.clipboard?.writeText(value).then(() => {
+          setCopied(true)
+          setTimeout(() => setCopied(false), 1500)
+        })
+      }}
+      aria-label={`Copy ${label}`}
+      title={`Copy ${label}`}
+      className="inline-flex max-w-full items-center gap-1.5 rounded-lg bg-surface px-2 py-1 font-mono text-[13px] text-ink hover:text-accent"
+    >
+      <span className="truncate">{value}</span>
+      {copied ? <Check className="size-3.5 shrink-0 text-accent" /> : <Copy className="size-3.5 shrink-0 opacity-60" />}
+    </button>
+  )
+}
 
 function ProjectCard({ p, index, onOpen }: { p: Project; index: number; onOpen: Props['onOpen'] }) {
   const number = String(index + 1).padStart(2, '0')
@@ -65,6 +87,31 @@ function ProjectCard({ p, index, onOpen }: { p: Project; index: number; onOpen: 
             {p.tech.map((t) => (
               <span key={t} className="tag !py-1 !text-[13px]">{t}</span>
             ))}
+          </div>
+        )}
+
+        {p.demo && p.demo.length > 0 && (
+          <div className="clay-in mt-4 rounded-2xl bg-surface-2 p-4">
+            <p className="flex items-center gap-2 text-sm font-semibold">
+              <KeyRound className="size-4 text-accent" /> Try the demo
+            </p>
+            <div className="mt-3 grid gap-3">
+              {p.demo.map((d) => (
+                <div key={d.role} className="text-sm">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted">{d.role}</p>
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <CopyField value={d.username} label={`${d.role} username`} />
+                    <CopyField value={d.password} label={`${d.role} password`} />
+                  </div>
+                </div>
+              ))}
+            </div>
+            {p.demoNote && (
+              <p role="note" className="mt-3 flex gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-xs leading-relaxed text-ink">
+                <TriangleAlert className="mt-0.5 size-4 shrink-0 text-amber-600" />
+                <span>{p.demoNote}</span>
+              </p>
+            )}
           </div>
         )}
 
